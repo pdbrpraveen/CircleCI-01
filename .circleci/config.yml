@@ -1,13 +1,13 @@
 jobs:
   build:
     docker:
-      - image: circleci/<language>:<version TAG>
+      image: "circleci/node:4.8.2"
     steps:
       - checkout
       - run: echo "hello world" # run the `echo` command
   test:
     docker:
-      - image: circleci/<language>:<version TAG>
+      image: "circleci/node:4.8.2"
     steps:
       - checkout
       - run: echo "2nd hello world" # run the `echo` command
