@@ -1,5 +1,9 @@
 jobs: 
-  steps: 
-    - checkout
-    - 
-      run: "echo \"hello world\""
+  build: 
+    docker: 
+      - 
+        image: "circleci/node:4.8.2"
+    steps: 
+      - checkout
+      - 
+        run: "echo \"hello world\""
