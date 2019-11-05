@@ -1,9 +1,19 @@
-jobs: 
-  build: 
-    docker: 
-      - 
-        image: "circleci/node:4.8.2"
-    steps: 
+jobs:
+  build:
+    docker:
+      - image: circleci/<language>:<version TAG>
+    steps:
       - checkout
-      - 
-        run: "echo \"hello world\""
+      - run: echo "hello world" # run the `echo` command
+  test:
+    docker:
+      - image: circleci/<language>:<version TAG>
+    steps:
+      - checkout
+      - run: echo "2nd hello world" # run the `echo` command
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
