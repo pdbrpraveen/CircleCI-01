@@ -1,4 +1,3 @@
---- 
 jobs: 
   build: 
     docker: 
@@ -8,8 +7,6 @@ jobs:
       - 
         run: "echo \"hello world\""
   test: 
-    docker: 
-      image: "circleci/node:4.8.2"
     steps: 
       - checkout
       - 
